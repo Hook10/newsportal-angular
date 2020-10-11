@@ -1,0 +1,18 @@
+<h2> News list</h2>
+<table class = "table table-striped">
+  <thead>
+    <tr>
+      <th> Name </th>
+      <th> Category </th>
+      <th> Content </th>
+
+    </tr>
+  </thead>
+  <tbody>
+      <tr *ngFor = "let news of newsList">
+        <td> {{news.name}}</td>
+        <td> {{news.category}}</td>
+        <td> {{news.content}}</td>
+      </tr>
+  </tbody>
+</table>
