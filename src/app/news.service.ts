@@ -12,6 +12,23 @@ export class NewsService {
   constructor(private httpClient: HttpClient) { }
 
   getNewsList(): Observable<News[]>{
-    return this.httpClient.get<News[]>('${this.baseUrl}');
+    return this.httpClient.get<News[]>(this.baseUrl);
   }
+
+  createNews(news: News ): Observable<Object>{
+    return this.httpClient.post(this.baseUrl, news);
+  }
+
+  getNewsById(id: number): Observable<News>{
+   return this.httpClient.get<News>(this.baseUrl +'/'+ id);
+  }
+
+  updateNews(id: number, news: News): Observable<Object>{
+    return this.httpClient.put(this.baseUrl + '/' + id, news);
+  }
+
+  deleteNews(id: number): Observable<Object>{
+    return this.httpClient.delete(this.baseUrl + '/' + id);
+  }
+
 }
