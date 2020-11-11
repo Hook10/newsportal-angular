@@ -8,6 +8,10 @@ import {AppRoutingModule} from "./app-routing.module";
 import { CreateNewsComponent } from './create-news/create-news.component';
 import {FormsModule} from "@angular/forms";
 import { UpdateNewsComponent } from './update-news/update-news.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { LoginsuccessComponent } from './loginsuccess/loginsuccess.component';
 
 
 
@@ -16,7 +20,11 @@ import { UpdateNewsComponent } from './update-news/update-news.component';
     AppComponent,
     NewsListComponent,
     CreateNewsComponent,
-    UpdateNewsComponent
+    UpdateNewsComponent,
+    HomeComponent,
+    LoginComponent,
+    RegistrationComponent,
+    LoginsuccessComponent
   ],
   imports: [
     BrowserModule,
